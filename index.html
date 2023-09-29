@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Willian Kana</title>
+    <link rel="stylesheet" href="css/presentacion-estilos.css" />
+    <script>
+      // Verificar si el contador de visitas ya existe en el almacenamiento local
+      if (localStorage.getItem("visitas")) {
+        // Si existe, obtener el valor actual y aumentarlo en 1
+        let visitas = parseInt(localStorage.getItem("visitas"));
+        visitas++;
+        // Actualizar el contador en la página y en el almacenamiento local
+        document.getElementById("contador").textContent = visitas;
+        localStorage.setItem("visitas", visitas.toString());
+      } else {
+        // Si no existe, crear el contador y establecerlo en 1
+        localStorage.setItem("visitas", "1");
+        document.getElementById("contador").textContent = "1";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="images/facebook.png" alt="facebook.png" >
+      </a>
+      <a href="https://github.com/" target="_blank">
+        <img src="images/github.png" alt="github.png">
+      </a>
+      <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank">
+        <img src="images/gmail.png" alt="gmail.png">
+      </a>
+    </header>
+
+    <div class="contenedor-flex-columna-pagina-principal">
+      <div class="contenedor-flex-fila">
+        <div class="contenedor-flex-imagen">
+          <img class="img-style"
+            src="images/avatar.jpg"
+            alt="avatar"
+
+          />
+        </div>
+        
+
+        <div class="contenedor-flex-textoinit">
+          <h3>Hola</h3>
+          <p>
+            Me llamo Willian Kana y actualmente soy estudiante de Diseño y
+            desarrollo de software en el instituto
+            <a href="https://www.tecsup.edu.pe/" target="_blank">TECSUP</a> para
+            un futuro desempeñarme como developer en esta industria.
+          </p>
+          
+          <br />
+        </div>
+
+
+        <div class="contenedor-flex-textoinit-2">
+          <h3>Sobre mi</h3>
+          <p>
+            Soy una persona fascinada por las ciencias computacionales desde que
+            descubrí esta carrera en mi juventud, y aunque aun soy estudiante
+            tengo planeado poder crear aplicaciones que ayuden y sean de impacto
+            en la sociedad.
+          </p>
+        </div>
+      </div>
+      
+      <div>
+        <hr />
+        <br /><br /><br />
+        <h3>Tecnologias y lenguajes de Programacion</h3>
+        <br /><br />
+        <p>Aprendí y hago uso de estas tecnologias:</p>
+        <br /><br />
+        <table class="tabla">
+          <tr>
+            <th class="tabla-th">
+              <h3>
+                Lenguaje <br />o<br />
+                tecnologia
+              </h3>
+            </th>
+            <th class="tabla-th">
+              <h3>Descripcion</h3>
+            </th>
+          </tr>
+          <tr>
+            <td class="tabla-td center">
+              <img
+                src="images/python-logo.png"
+                alt="python logo"
+                width="70px"
+              />
+            </td>
+            <td class="tabla-td">
+              <h4>python</h4>
+              <p>
+                Utilizo python orientado a la inteligencia artificial y analisis
+                de datos con librerias como pandas, numpy o tensorflow.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tabla-td center">
+              <img src="images/java-logo.png" alt="java logo" width="100px" />
+            </td>
+            <td class="tabla-td">
+              <h4>Java</h4>
+              <p>
+                Conocimiento intermedio en java para la creacion de aplicaciones
+                con uso de base de datos locales.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tabla-td center">
+              <img src="images/mysql-logo.png" alt="mysql logo" width="100px" />
+            </td>
+            <td class="tabla-td">
+              <h4>mySQL</h4>
+              <p>
+                Conocimiento en modelamiento y creacion de base de datos
+                relacionales estables con mysql, ademas aplicaciones que hacen
+                uso de base de datos.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tabla-td center">
+              <img
+                src="images/docker-logo.png"
+                alt="docker logo"
+                width="100px"
+              />
+            </td>
+            <td class="tabla-td">
+              <h4>Docker</h4>
+              <p>
+                Conocimiento intermedio de docker para el despliegue de software
+                en diferentes sistemas operaticos, agilizando la creacion y
+                testing de aplicaciones en la gran variedad de SO en el mercado.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tabla-td center">
+              <img
+                src="images/html-css-java logo.png"
+                alt="htmlcssjs-logo"
+                width="100px"
+              />
+            </td>
+            <td class="tabla-td">
+              <h4>HTML - CSS - JS</h4>
+              <p>
+                Conocimiento en creacion de paginas web con html css y
+                javascript de mano con el framework de bootstrap.
+              </p>
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+        <p>
+          Aun sigo aprendiendo muchas más herramientas y simplemente destaco las
+          mencionadas.
+        </p>
+        <br />
+      </div>
+
+      <div class="centrar">
+        <hr />
+        <br />
+        <h3>Más Informacion:</h3>
+        <p>Enviame tu correo para más informacion.</p>
+        <form>
+          <label for="mail">Correo</label><br /><br />
+          <input
+            type="text"
+            id="mail"
+            name="mail"
+            placeholder="Escribe tu correo"
+            required="true"
+          /><br />
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+      
+  </div>
+  <footer class="contenedor-pagina" >
+    <h1>Contador de Visitas Local</h1>
+    <p>Esta página ha sido visitada <span id="contador"></span> veces.</p>
+  </footer>
+  </body>
+</html>
